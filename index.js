@@ -15,6 +15,10 @@ app.post('/webhook', (req, res) => {
     console.log('Webhook payload: ', req.body);
     res.status(200).end();
 });
+// Let make a simple test landing page
+app.get('/', (req, res) => {
+    res.send('This is a test landing page');
+});
 
 // Starting the server
 const port = process.env.PORT || 443;
